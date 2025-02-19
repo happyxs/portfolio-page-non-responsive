@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Horizon';
+    src: url('fonts/horizon.otf') format('opentype'), url('fonts/horizon_outlined.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'VT323';
+    src: url(fonts/VT323-Regular.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Space Mono";
+    src: url(fonts/SpaceMono-Regular.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pro';
+    src: url(fonts/AnonymousPro-Regular.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Horizon'
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|"; 
+    margin-left: 30px;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    font-family: 'Horizon'
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+}
+
+h3 {
+    font-family: 'Space Mono';
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    margin-top: -55px;
+}
+
+p {
+    font-family: 'Pro';
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    margin-top: -30px;
+
+}
+
+.social-sidebar {
+    position: fixed; 
+    top: 50%; 
+    left: 13px;
+    transform: translateY(-50%); 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.social-sidebar a {
+    color: white; 
+    font-size: 24px; 
+    transition: color 0.3s ease; 
+}
+
+.social-sidebar a:hover {
+    color: gray; 
+}
+
+.hello {
+    color: white;
+    font-family: 'VT323';
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    margin-top: -60px;
+}
+
+.img-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('space_image.jpg') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: -1; 
+    user-select: none;
+}
+
+.logo-img {
+    display: flex;
+    height: 150px;
+    user-select: none;
+    width: auto;
+}
